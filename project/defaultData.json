@@ -1,0 +1,16 @@
+{
+    "weather":
+        {
+            "location": "Corvallis",
+            "max-temp": 66,
+            "min-temp": 41,
+            "current-temp": 52,
+            "weather": 
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10n"
+                }
+        }
+}

@@ -1,0 +1,14 @@
+
+<div id="clothing-container" class="clothing">
+    <div class="item-details">
+        <div class="item-name">Item: {{first}}</div>
+        <div class="description">Description:
+            <div id="descr-content"></div>
+        </div>
+    </div>
+    <div class="item-selection">
+        {{#each chosenClothing}}
+            {{>smallButtons}}
+        {{/each}}
+    </div>
+</div>

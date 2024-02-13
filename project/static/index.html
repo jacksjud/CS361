@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Something</title>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="../static/styles.css">
+
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tutorial Button -->
+    <script src="https://kit.fontawesome.com/a423c4abf7.js" crossorigin="anonymous"></script>
+    
+    <script src="../static/index.js" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+
+    <main class="content">
+        <!-- Left Side of Screen -->
+        <section class="left-side-container">
+            <div class="weather-box">
+                <div class="weather">
+                    <div class="title">Title</div>
+                    <img src="weather-image.jpg" alt="Weather Image">
+                </div>
+                <div class="temperature">
+                    <div class="title">Temperature</div>
+                    <div class="forecast">Low: 10°C / High: 25°C</div>
+                </div>
+            </div>
+            
+
+            <div class="clothing">
+                <div class="item-details">
+                    <div class="item-name">Item Name</div>
+                    <div class="description">Description</div>
+                </div>
+                <div class="item-selection">
+                    <button><img src="button-image-1.jpg" alt="Button Image 1"></button>
+                    <button><img src="button-image-2.jpg" alt="Button Image 2"></button>
+                    <!-- Add more buttons as needed -->
+                </div>
+            </div>
+
+            <div class="settings">
+                <div class="bigger">
+                    <div class="edit-location">
+                        Edit Location: <input type="text" placeholder="Enter Location">
+                    </div>
+                    <div class="bigger-buttons">
+                        <button>Login/Sign Up</button>
+                        <button>Scheduler</button>
+                    </div>
+                </div>
+                <div class="smaller">
+                    Wardrobe and Preferences
+                </div>
+            </div>
+            
+
+        </section>
+
+        <!-- Right Side of Screen -->
+        <section class="right-side-container">
+            <div class="tabs">
+                <div class="tab-headers">
+                    <div class="tab-header active" id="tab-header-1" onclick="toggleTab(1)">Tab 1</div>
+                    <div class="tab-header" id="tab-header-2" onclick="toggleTab(2)">Tab 2</div>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content active" id="tab-content-1">Content for Tab 1</div>
+                    <div class="tab-content" id="tab-content-2">Content for Tab 2</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button type="button" id="tutorial-button"><i class="fa-solid fa-question"></i></button>
+</body>
+
+</html>

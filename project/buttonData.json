@@ -1,0 +1,14 @@
+[
+    {
+        "id": "preferences",
+        "url": "/buttons/preferences.svg",
+        "description": "settings button"
+
+    },
+    {
+        "id": "wardrobe",
+        "url": "/buttons/wardrobe.svg",
+        "description": "wardrobe button"
+
+    }
+]

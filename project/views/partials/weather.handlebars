@@ -1,0 +1,17 @@
+
+    <div class="weather-box">
+        <div class="weather">
+            <div class="title">Location: <span id="weather-location-title">{{weather.location}}</span></div>
+            <div class="weather-img-container">
+                <img id="weather-icon-img" src="http://api.openweathermap.org/img/w/{{weather.weather.icon}}.png" alt="Weather Image">
+            </div>
+            <span id="weather-description">{{weather.weather.main}}</span>
+            
+        </div>
+        <div class="temperature">
+            <div class="title">Temperature Range</div>
+                <div id="temp-display" class="forecast">Low: <span id="lowTemp">{{weather.min-temp}}</span>°F /
+                 High: <span id="highTemp">{{weather.max-temp}}</span>°F</div>
+        </div>
+    </div>
+

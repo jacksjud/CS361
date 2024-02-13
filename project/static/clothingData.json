@@ -1,0 +1,114 @@
+{
+  "baby-knitwear": {
+    "url": "/clothingitems/baby-knitwear.svg",
+    "description": "baby-knitwear"
+  },
+  "blouse": {
+    "url": "/clothingitems/blouse.svg",
+    "description": "blouse"
+  },
+  "bolero-jacket": {
+    "url": "/clothingitems/bolero-jacket.svg",
+    "description": "bolero-jacket"
+  },
+  "bow-tie": {
+    "url": "/clothingitems/bow-tie.svg",
+    "description": "bow-tie"
+  },
+  "down-jacket": {
+    "url": "/clothingitems/down-jacket.svg",
+    "description": "down-jacket"
+  },
+  "gloves": {
+    "url": "/clothingitems/gloves.svg",
+    "description": "gloves"
+  },
+  "hoody": {
+    "url": "/clothingitems/hoody.svg",
+    "description": "hoody"
+  },
+  "jacket-male": {
+    "url": "/clothingitems/jacket-male.svg",
+    "description": "jacket-male"
+  },
+  "jeans-boy": {
+    "url": "/clothingitems/jeans-boy.svg",
+    "description": "jeans-boy"
+  },
+  "jerkin-boy": {
+    "url": "/clothingitems/jerkin-boy.svg",
+    "description": "jerkin-boy"
+  },
+  "jerkin": {
+    "url": "/clothingitems/jerkin.svg",
+    "description": "jerkin"
+  },
+  "knitwear-dress": {
+    "url": "/clothingitems/knitwear-dress.svg",
+    "description": "knitwear-dress"
+  },
+  "knitwear-jacket": {
+    "url": "/clothingitems/knitwear-jacket.svg",
+    "description": "knitwear-jacket"
+  },
+  "knitwear-vest": {
+    "url": "/clothingitems/knitwear-vest.svg",
+    "description": "knitwear-vest"
+  },
+  "mittens-baby": {
+    "url": "/clothingitems/mittens-baby.svg",
+    "description": "mittens-baby"
+  },
+  "pants": {
+    "url": "/clothingitems/pants.svg",
+    "description": "pants"
+  },
+  "rain-jacket": {
+    "url": "/clothingitems/rain-jacket.svg",
+    "description": "rain-jacket"
+  },
+  "scarf": {
+    "url": "/clothingitems/scarf.svg",
+    "description": "scarf"
+  },
+  "shirt-boy": {
+    "url": "/clothingitems/shirt-boy.svg",
+    "description": "shirt-boy"
+  },
+  "shirt-sleeved": {
+    "url": "/clothingitems/shirt-sleeved.svg",
+    "description": "shirt-sleeved"
+  },
+  "shorts": {
+    "url": "/clothingitems/shorts.svg",
+    "description": "shorts"
+  },
+  "singlet": {
+    "url": "/clothingitems/singlet.svg",
+    "description": "singlet"
+  },
+  "skirt": {
+    "url": "/clothingitems/skirt.svg",
+    "description": "skirt"
+  },
+  "sport-jacket": {
+    "url": "/clothingitems/sport-jacket.svg",
+    "description": "sport-jacket"
+  },
+  "tie": {
+    "url": "/clothingitems/tie.svg",
+    "description": "tie"
+  },
+  "tshirt-sleeved": {
+    "url": "/clothingitems/tshirt-sleeved.svg",
+    "description": "tshirt-sleeved"
+  },
+  "tshirt": {
+    "url": "/clothingitems/tshirt.svg",
+    "description": "tshirt"
+  },
+  "vest": {
+    "url": "/clothingitems/vest.svg",
+    "description": "vest"
+  }
+}

@@ -1,0 +1,62 @@
+<div class="pref-modal modal" id="preferencesModal">
+  <div class="pref-modal-content">
+    {{!-- <span class="close">&times;</span> --}}
+    <h2>Preferences</h2>
+    <label for="temperature">Temperature Preference:</label>
+    <input type="radio" id="colder" name="temperature" value="colder">
+    <label for="colder">Colder</label>
+    <input type="radio" id="hotter" name="temperature" value="hotter">
+    <label for="hotter">Hotter</label>
+    <input type="radio" id="neutral" name="temperature" value="neutral" checked>
+    <label for="neutral">Neutral</label>
+
+    <br><br>
+
+    <label for="uvIndex">UV Index:</label>
+    <input type="checkbox" id="uvIndex" name="uvIndex">
+
+    <br><br>
+
+    <label for="wayOfTravel">Way of Travel:</label>
+    <select id="wayOfTravel" name="wayOfTravel">
+      <option value="None">None</option>
+      <option value="Car">Car</option>
+      <option value="Train">Train</option>
+      <option value="Walking">Walking</option>
+      <option value="Bike">Bike</option>
+    </select>
+
+    <br><br>
+
+    <label for="stayingDry">Staying Dry Method:</label>
+    <select id="stayingDry" name="stayingDry">
+      <option value="Brave it">Brave it</option>
+      <option value="Umbrella">Umbrella</option>
+      <option value="Coat">Coat</option>
+      <option value="None" selected>None</option>
+    </select>
+
+    <br><br>
+
+    <label for="formality">Formality:</label>
+    <select id="formality" name="formality">
+      <option value="Intimate">Intimate</option>
+      <option value="Casual" selected>Casual</option>
+      <option value="Formal">Formal</option>
+    </select>
+
+    <br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="None" selected>None</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <br><br>
+
+    <button id="cancelPreferences">Cancel</button>
+    <button id="applyPreferences">Apply</button>
+  </div>
+</div>

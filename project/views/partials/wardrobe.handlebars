@@ -1,0 +1,20 @@
+<div id="wardrobeModal" class="wardrobe-modal modal">
+  
+  <div class="wardrobe-modal-content">
+   
+    {{!-- <button id="closeModal" class="close">&times;</button> --}}
+    
+    <div class="clothing-list">
+
+        {{#each wardrobeItems}}
+            {{>wardrobeItem}}
+        {{/each}}
+
+    </div>
+
+    <div class="modal-buttons">
+      <button id="wardrobeClose" class="close">Cancel</button>
+      <button id="wardrobeApply">Apply</button>
+    </div>
+  </div>
+</div>

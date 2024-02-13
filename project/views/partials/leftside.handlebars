@@ -1,0 +1,30 @@
+<section class="left-side-container">
+    {{>weather}}
+    
+
+    {{>clothing}}
+
+    <div class="settings">
+        <div class="bigger">
+            <div class="edit-location">
+                <div id="input-holder" class="centered-container"><br>
+                    <form action="/action_page.php">
+                        <label for="new-location">Edit Location:</label><br>
+                        <input id="new-location" name="new-location" type="text" placeholder="Enter Zip Code" style="padding: 3px 3px"><br>
+                        <input id="new-location-button" type="submit" value="Submit" style="margin: 3px 3px">
+                    </form>
+                </div>
+            </div>
+            <div class="bigger-buttons">
+                <button id="login-sign-up-button">Login/Sign Up</button>
+                <button id="schedule-button">Scheduler</button>
+            </div>
+        </div>
+        <div class="smaller">
+            {{#each smallButtons}}
+                {{>smallButtons}}
+            {{/each}}
+        </div>
+    </div>
+    
+</section>
