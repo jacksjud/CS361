@@ -1,4 +1,12 @@
-<div class="post" id={{id}}>
+{{!-- <div class="post" id={{id}}>
     <img src={{url}} alt={{description}}>
     <input type="checkbox" class="selector" checked>Select</input>
+</div> --}}
+
+<div class="wardrobe-item" id="{{id}}">
+    <img src="{{url}}" alt="{{description}}">
+
+    <input type="radio" class="selector" name="selectedImage" data-id="{{id}}">
+    {{name}}
+
 </div>

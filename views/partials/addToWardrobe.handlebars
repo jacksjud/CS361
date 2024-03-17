@@ -1,0 +1,46 @@
+<div id="addToWardrobe" class="wardrobe-modal modal">
+  <div class="wardrobe-modal-content">
+    <button id="wardrobeClose" >Close</button>
+    <h2>Add Item to Wardrobe</h2>
+
+    <div id="image-list">
+        {{#each wardrobeItems}}
+            {{>wardrobeItem}}
+        {{/each}}
+
+    </div>
+
+    <label for="photoName">Item Name:</label>
+    <input type="text" id="itemName"><br><br>
+    <label for="type">Item Type (Where on your body would you wear this item?):</label>
+    <select id="type-choice">
+      <option value="Select" selected>[Select]</option>
+      <option value="Top" >Top</option>
+      <option value="Bottom">Bottom</option>
+      <option value="Accessory">Accessory</option>
+    </select><br><br>
+
+    <label for="temperature-choice">Temperature (What temperature range would you wear this item?):</label>
+    <select id="temperature-choice">
+      <option value="Neutral" selected>Neutral</option>
+      <option value="Hot">Hot</option>
+      <option value="Cold">Cold</option>
+    </select><br><br>
+
+    <label for="formality-choice">Formality (How formal is this item?):</label>
+    <select id="formality-choice">
+      <option value="Casual" selected>Casual</option>
+      <option value="Intimate">Intimate</option>
+      <option value="Formal">Formal</option>
+    </select><br><br>
+
+    <label for="gender-choice">Gender (Is this an item you'd associate with a gender?):</label>
+    <select id="gender-choice">
+      <option value="None" selected>None</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+    </select><br><br>
+    
+    <button id="addToWardrobeButton">Add to Wardrobe</button>
+  </div>
+</div>

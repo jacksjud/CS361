@@ -1,4 +1,4 @@
-<div id="loginModal" class="login-signup-modal modal">
+{{!-- <div id="loginModal" class="login-signup-modal modal">
     <div class="modal-content">
         <div class="modal-header">
             <h2>Attire Suggestion Login</h2>
@@ -17,4 +17,22 @@
             <button id="login-submit">Login</button>
         </div>
     </div>
+</div> --}}
+
+<div id="loginModal" class="form-box modal login-signup-modal">
+<form class="form">
+    <span class="modal-title">Log in</span>
+    <span class="subtitle">Log in with your username and password.</span>
+    <div class="form-container">
+        <input id="username" type="text" class="input" placeholder="Username">
+			
+		<input id="password" type="password" class="input" placeholder="Password">
+    </div>
+    <button id="login-submit">Log in</button>
+</form>
+<div class="form-section">
+  <p>Don't have an account? <button id="signUp-button">Sign Up</button> </p>
+  <button id="cancelLogin">Cancel</button>
+</div>
+
 </div>

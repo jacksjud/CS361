@@ -1,9 +1,11 @@
 
 <div id="clothing-container" class="clothing">
     <div class="item-details">
-        <div class="item-name">Item: {{first}}</div>
-        <div class="description">Description:
-            <div id="descr-content"></div>
+        <div class="item-name">Item: {{first.id}}</div>
+        <div class="description">Why this was chosen:
+            <div id="descr-content">
+                {{first.description}}
+            </div>
         </div>
     </div>
     <div class="item-selection">
