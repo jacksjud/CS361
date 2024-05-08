@@ -1,4 +1,3 @@
-
 // Default weather info loaded on start, replaced once location is received
 weather_info = {
     "location": "NONE",
@@ -141,7 +140,7 @@ function writeClothingInfo(event) {
     }
 
     // Updates name
-    document.querySelector(".item-name").textContent = "Item: " + item.itemName
+    document.querySelector(".item-name").textContent = "Item: " + item["itemName"]
     // Update description
     document.getElementById("descr-content").textContent = getDescription(item)
 }
@@ -261,6 +260,72 @@ var closeTut = document.getElementById("close-tut-done").addEventListener("click
 })
 
 
+// 
+/////////////////////        Earthquake Modal      ///////////////////////
+// 
+
+// Variable to hold data of closest earthquake
+var closest
+document.getElementById("eq-button").addEventListener('click', getClosestEQData)
+
+function getClosestEQData() {
+
+    // URL to get data for closest EQ , uses current lat and long values
+    const url = new URL('http://localhost:8000/get-closest-earthquake/?latitude='+ lat +'&longitude='+ long);
+    
+    fetch(url)
+        .then(response => response.json())     
+        .then(data => {
+            closest = data.closest_earthquake
+            eqData = {}
+            eqData["title"] = closest.place
+            eqData["magnitude"] = closest.magnitude
+            eqData["place"] = closest.place
+            eqData["time"] = closest.time
+            getEQURL(closest.detail)
+            // eqData["link"] = getEQURL(closest.detail)
+
+            eqData["tsunami"] = closest.tsunami
+            console.log(eqData)
+            displayEQModal(eqData)
+            
+            
+        })
+        .catch(error => {
+            console.error("Earthquake data not gotten correctly ", error);
+        });
+
+}
+
+
+function displayEQModal(data){
+    document.getElementById("eq-title").textContent = data["title"]
+    document.getElementById("eq-magnitude").textContent = data["magnitude"]
+    document.getElementById("eq-time").textContent = data["time"]
+
+    document.getElementById("eq-tsunami").textContent = data["tsunami"] ? "Yes" : "No"
+
+    document.getElementById("eq-modal").style.display = "block"
+    
+}
+
+// Tutorial done button 
+var closeEQ = document.getElementById("close-eq-done").addEventListener("click", closeEQModal)
+function closeEQModal(){
+    document.getElementById("eq-modal").style.display = "none"
+}
+
+function getEQURL(link) {
+    fetch(link)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data["properties"]["url"]+'/executive')
+            document.getElementById("eq-link").href = data["properties"]["url"]+'/executive'
+        })
+        .catch(error => {
+            console.error("Error getting URL of details page for EQ: " , error)
+        })
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -523,8 +588,6 @@ function addWardrobeItem(){
 
     setNewItem(imageURL)
 
-    console.log(wardrobeContents)
-
     defaultWardrobeInputs()
 }
 
@@ -563,6 +626,7 @@ function setNewItem(imageURL){
     newItem["id"] = newItem.itemName.replace(" ", "-").toLowerCase()    // Uses new name as ID so that it is unique
     wardrobeContents.push(newItem)
 }
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -651,7 +715,7 @@ function updateSuggestion() {
     checkToChangeStayingDry()
 
 }
-// updateSuggestion()
+
 
 function updateButtons(suggestions) {
     console.log(`== ${arguments.callee.name} called == `);
@@ -688,8 +752,8 @@ function updateDisplay(suggestions) {
     try{
         suggestions.forEach(function(item, index){
             var image = displayImages[index]
-            image.src = item.src
-            image.alt = item.itemName
+            image.src = item["src"]
+            image.alt = item["itemName"]
         })
     } catch(error){
         console.log("An error occurred in updateDisplay: " + error.message)
@@ -722,72 +786,6 @@ function checkToChangeStayingDry(){
 }
 
 
-///////////// Potential input for clothing items ??
-
-// const fs = require('fs');
-// const path = require('path');
-
-// function saveSVGFileInfo(folderPath, jsonDataFilePath) {
-//     const clothingData = [];
-
-//     fs.readdir(folderPath, (err, files) => {
-//         if (err) {
-//             console.error('Error reading folder:', err);
-//             return;
-//         }
-
-//         files.forEach(file => {
-//             if (path.extname(file) === '.svg') {
-//                 const id = path.basename(file, '.svg').replace(/-svgrepo-com/g, '');
-//                 const newFileName = id + '.svg';
-//                 const url = `/clothingitems/${newFileName}`;
-//                 const description = `${id}`;
-//                 const scale = '.3';
-
-//                 clothingData.push({ id, url, description, scale });
-
-//                 // Rename the file
-//                 fs.rename(path.join(folderPath, file), path.join(folderPath, newFileName), err => {
-//                     if (err) {
-//                         console.error('Error renaming file:', err);
-//                         return;
-//                     }
-//                 });
-//             }
-//         });
-
-//         fs.writeFile(jsonDataFilePath, JSON.stringify(clothingData, null, 2), err => {
-//             if (err) {
-//                 console.error('Error writing JSON data:', err);
-//                 return;
-//             }
-//             console.log('SVG file information saved successfully.');
-//         });
-//     });
-// }
-
-// saveSVGFileInfo('./clothingitems', './clothingData.json');
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Variable to hold data of closest earthquake
-var closest
-document.getElementById("eq-button").addEventListener('click', function(){
-
-    // URL to get data for closest EQ , uses current lat and long values
-    const url = new URL('http://localhost:8000/get-closest-earthquake/?latitude='+ lat +'&longitude='+ long);
-    
-    fetch(url)
-        .then(response => response.json())     
-        .then(data => {
-            closest = data.closest_earthquake
-            
-            console.log(closest)
-        })
-        .catch(error => {
-            console.error("Earthquake data not gotten correctly ", error);
-        });
-
-}) 

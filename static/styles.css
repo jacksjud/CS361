@@ -726,18 +726,13 @@ body {
 /*  need to redo tutorial button with essentially the same thing we got here
 27?
 */
-/*   
-  .earthquake-button {
-    position: relative;
-    
-  }
-  
-  .eq-button {
+
+  .tutorial-button {
     position: fixed;
     border: 2px solid lightblue;
     border-radius: 30px;
     right: 30px;
-    bottom: 100px;
+    bottom: 27px;
     height: 60px;
     width: 60px;
     border: 2px solid lightblue;
@@ -749,20 +744,20 @@ body {
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
   }
   
-  #eq-button:hover,
-  #eq-button:focus {
+  #tutorial-button:hover,
+  #tutorial-button:focus {
     right: 27px;
-    bottom: 97px;
+    bottom: 27px;
     height: 66px;
     width: 66px;
-    border-radius: 33px;
+    border-radius: 40px;
   }
   
-  #eq-button:focus {
+  #tutorial-button:focus {
     outline: none;
   }
   
-   */
+  
   /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
   /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
   /*  end of right side of screen */

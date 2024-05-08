@@ -1,5 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
+const handlebars = require("handlebars")
 const hb_adapter = require('express-handlebars');
 const express = require('express')
 
@@ -34,18 +35,18 @@ app.use(express.json());
 // Use handlebars
 app.engine('handlebars', hb_adapter.engine({ defaultLayout: "main" }))   // sets up template engine (handlebars)
 app.set('view engine', 'handlebars')            // sets up view engine 
-app.set('views', './views')                // registers where templates are
+app.set('views', './views')                     // registers where templates are
 
 
 app.get("/" , function(req, res) {
     res.render('body',{
-        smallButtons: buttonData,       // for Wardrobe and Preferences Buttons
-        weather: dataToUse.weather,     // for weather
-        chosenClothing: defaultClothes,    // for clothing -> sends array of clothing 
-        first: defaultClothes[0],  
-        tabs: tabs,                      // for tabs
-        displayUV: true,                 // constant for now, will change once the user files are used 
-        wardrobeItems: clothingData         // array of all clothes available
+        smallButtons: buttonData,           // for Wardrobe and Preferences Buttons
+        weather: dataToUse.weather,         // for weather
+        chosenClothing: defaultClothes,     // for clothing -> sends array of clothing 
+        first: '',  
+        tabs: tabs,                         
+        displayUV: true,                 
+        wardrobeItems: clothingData         
     })
 })
 
